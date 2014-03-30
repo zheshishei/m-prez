@@ -1,0 +1,22 @@
+{
+  "name": "Mprez",
+  "version": "0.0.1",
+  "description": "A locally runnable server for easily making worship presentations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zheshishei/m-prez.git"
+  },
+  "author": "Alan Sun",
+  "license": "MIT LICENSE",
+  "bugs": {
+    "url": "https://github.com/zheshishei/m-prez/issues"
+  },
+  "homepage": "https://github.com/zheshishei/m-prez",
+  "dependencies": {
+    "express": "~3.5.1"
+  }
+}
