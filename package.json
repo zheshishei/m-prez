@@ -17,8 +17,8 @@
   },
   "homepage": "https://github.com/zheshishei/m-prez",
   "dependencies": {
+    "express": "^4.0.0",
     "jade": "~1.3.1",
-    "express": "~4.0.0",
-    "socket.io": "~0.9.16"
+    "socket.io": "^1.0.6"
   }
 }

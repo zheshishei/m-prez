@@ -2,15 +2,14 @@ var express = require('express');
 var http = require('http');
 var socketio = require('socket.io');
 
-var app = express();
-var server = http.createServer(app);
-var io = socketio.listen(server);
-
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
 
 // Set the view directory to /views
 app.set("views", __dirname + "/views");
 
-// Let's use the Jade templating language
+// Set the template engine to Jade
 app.set("view engine", "jade");
 
 app.get("/controller", function(request, response){
@@ -22,4 +21,12 @@ app.get("*", function(request, response){
 });
 
 server.listen(8080);
-console.log("Server running at http://localhost:8080/");
+console.log("Server running at http://localhost:8080/.\nPress Ctrl+C"+
+						" to shut down the server");
+
+process.on( 'SIGINT', function() {
+  console.log( "\nDetected SIGINT (Ctrl-C). Shutting down the server." );
+  // some other closing procedures go here
+  process.exit( );
+	console.log("Server has been shut down.");
+})
