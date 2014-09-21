@@ -33,11 +33,9 @@ function Controller() {
 
   //go to a specific song, specified by "song", the ID of the div
   function goTo(song, slide) {
-    if (song === undefined && slide === undefined) {
-      currentSong = songs.firstElementChild;
-      slideOrder = currentSong.querySelector(".slideorder").innerHTML.split("");
-    }
-    currentSong = song === undefined ? songs.firstElementChild : songs.querySelector("." + song);
+		song === undefined ?
+			currentSong === undefined? songs.firstElementChild : currentSong
+		: songs.querySelector("." + song);
     slideOrder = song.querySelector(".slideorder").innerHTML.split("");
     currentSlide = slide === undefined ? 1 : slide;
   }
