@@ -1,11 +1,52 @@
 ﻿doctype html
+meta(charset="utf-8")
 html
-	head
-		title Index
-    include ../css/screen.css
-    include ../js/screen.js
-	body
-		div#screen
-      ul#songs
+ head
+  title Index
 
-    
+  link(rel="stylesheet", href="/css/screen.css")
+
+  script(type="text/javascript", src="/js/screen.js")
+
+ body
+  div#screenContainer
+   div#screen
+
+  ul#songs
+   div#Hosanna
+    div.slideorder
+     |12C12CCBC
+    div.1.
+     First Verse
+    div.2.
+     Second Verse
+    div.C.
+     Chorus
+    div.B.
+     Bridge
+   div#Hosanna2
+    div.slideorder
+     |12C12CCBC
+    div.1
+     p.
+      First Verse
+     p.
+      CCCCCCCCCCC
+    div.2
+     p.
+      Second Verse
+     p.
+      CCCCCCCCCCC
+    div.C
+     p.
+      Chorus
+     p.
+      CCCCCCCCCCC
+    div.B
+     p.
+      Bridge
+     p.
+      CCCCCCCCCCC
+
+  script.
+   screenController = Screen();
